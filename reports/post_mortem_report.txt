@@ -1,0 +1,257 @@
+======================================================================
+TRAINING POST-MORTEM REPORT
+======================================================================
+
+Total training steps: 600
+Total anomalies detected: 37
+Forensic snapshots saved: 15
+Final loss: 0.0198
+Min loss: 0.0109
+Max loss: 13.7877
+
+======================================================================
+ANOMALY SUMMARY
+======================================================================
+  CUSUM_HIGH: 15 alerts
+  SHEWHART: 15 alerts
+  SHEWHART_2of3: 7 alerts
+
+======================================================================
+SPIKE DETAILS
+======================================================================
+
+--- Step 150 ---
+  Loss: 12.742458
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 56.689540
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 30.366169
+    transformer.h.0.mlp.c_fc.weight: 15.866893
+    transformer.h.0.mlp.c_proj.weight: 15.161007
+    transformer.h.0.attn.c_proj.weight: 14.729855
+    transformer.h.1.mlp.c_proj.weight: 12.167331
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 150.0, 'state_step_mean': 150.0, 'state_step_max': 150.0, 'state_exp_avg_norm': 0.2895703613758087, 'state_exp_avg_mean': 1.0047394860546177e-10, 'state_exp_avg_max': 0.016930731013417244, 'state_exp_avg_sq_norm': 0.002476194640621543, 'state_exp_avg_sq_mean': 7.767737564279287e-09, 'state_exp_avg_sq_max': 0.00045555204269476235}
+
+--- Step 151 ---
+  Loss: 10.957162
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 7.602486
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 3.890335
+    transformer.h.0.mlp.c_fc.weight: 1.975223
+    transformer.h.0.mlp.c_proj.weight: 1.917077
+    transformer.h.0.attn.c_proj.weight: 1.755127
+    transformer.h.1.mlp.c_proj.weight: 1.656803
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 151.0, 'state_step_mean': 151.0, 'state_step_max': 151.0, 'state_exp_avg_norm': 0.25931140780448914, 'state_exp_avg_mean': 1.5249093654468027e-10, 'state_exp_avg_max': 0.015261870808899403, 'state_exp_avg_sq_norm': 0.0024737773928791285, 'state_exp_avg_sq_mean': 7.760159626002405e-09, 'state_exp_avg_sq_max': 0.0004551158635877073}
+
+--- Step 152 ---
+  Loss: 0.468550
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 3.023018
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 1.075751
+    transformer.h.0.mlp.c_fc.weight: 1.040768
+    transformer.wte.weight: 0.880087
+    transformer.h.0.mlp.c_proj.weight: 0.870265
+    transformer.h.0.attn.c_proj.bias: 0.746937
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 152.0, 'state_step_mean': 152.0, 'state_step_max': 152.0, 'state_exp_avg_norm': 0.23322097957134247, 'state_exp_avg_mean': 1.8519648314896386e-10, 'state_exp_avg_max': 0.013743204064667225, 'state_exp_avg_sq_norm': 0.0024713040329515934, 'state_exp_avg_sq_mean': 7.752691821849567e-09, 'state_exp_avg_sq_max': 0.00045466076699085534}
+
+--- Step 154 ---
+  Loss: 0.388392
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 1.968677
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 0.981278
+    transformer.h.0.attn.c_proj.bias: 0.674399
+    transformer.h.0.mlp.c_fc.weight: 0.629437
+    transformer.h.0.mlp.c_proj.weight: 0.521002
+    transformer.wte.weight: 0.447990
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 154.0, 'state_step_mean': 154.0, 'state_step_max': 154.0, 'state_exp_avg_norm': 0.2133319079875946, 'state_exp_avg_mean': 2.1660309657001164e-10, 'state_exp_avg_max': 0.012238774448633194, 'state_exp_avg_sq_norm': 0.0024692111182957888, 'state_exp_avg_sq_mean': 7.755335929005014e-09, 'state_exp_avg_sq_max': 0.000453765009297058}
+
+--- Step 301 ---
+  Loss: 0.201309
+  Learning rate: 3.00e-03
+  Alert type: SHEWHART
+  Metric: total_grad_norm
+  Value: 1.641212
+  Top 5 gradient norms:
+    transformer.wte.weight: 0.613215
+    transformer.h.0.attn.c_attn.weight: 0.602454
+    transformer.h.0.mlp.c_fc.weight: 0.559207
+    transformer.h.0.mlp.c_proj.weight: 0.513039
+    transformer.h.1.mlp.c_proj.weight: 0.403274
+  Optimizer state:
+    group_0: {'lr': 0.0029999999999999996, 'state_step_norm': 301.0, 'state_step_mean': 301.0, 'state_step_max': 301.0, 'state_exp_avg_norm': 0.05173448845744133, 'state_exp_avg_mean': -3.1550739798547056e-10, 'state_exp_avg_max': 0.0038199799600988626, 'state_exp_avg_sq_norm': 0.0022409402299672365, 'state_exp_avg_sq_mean': 7.322532358244871e-09, 'state_exp_avg_sq_max': 0.00039747930713929236}
+
+--- Step 302 ---
+  Loss: 0.846698
+  Learning rate: 3.00e-03
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 8.147591
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 3.276723
+    transformer.h.0.mlp.c_proj.weight: 2.872448
+    transformer.h.0.mlp.c_fc.weight: 2.750309
+    transformer.wte.weight: 2.686239
+    transformer.h.1.mlp.c_proj.weight: 2.001990
+  Optimizer state:
+    group_0: {'lr': 0.0029999999999999996, 'state_step_norm': 302.0, 'state_step_mean': 302.0, 'state_step_max': 302.0, 'state_exp_avg_norm': 0.05533616244792938, 'state_exp_avg_mean': -4.52356402336207e-10, 'state_exp_avg_max': 0.0049150250852108, 'state_exp_avg_sq_norm': 0.0022414878476411104, 'state_exp_avg_sq_mean': 7.329676865452939e-09, 'state_exp_avg_sq_max': 0.0003971210098825395}
+
+--- Step 303 ---
+  Loss: 0.652588
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 5.643943
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 3.169542
+    transformer.h.0.attn.c_proj.bias: 1.768795
+    transformer.h.0.mlp.c_fc.weight: 1.449629
+    transformer.wte.weight: 1.389124
+    transformer.h.0.attn.c_proj.weight: 1.363064
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 303.0, 'state_step_mean': 303.0, 'state_step_max': 303.0, 'state_exp_avg_norm': 0.05707867443561554, 'state_exp_avg_mean': -4.593057600921213e-10, 'state_exp_avg_max': 0.005812427494674921, 'state_exp_avg_sq_norm': 0.0022411695681512356, 'state_exp_avg_sq_mean': 7.33361327220905e-09, 'state_exp_avg_sq_max': 0.00039675546577200294}
+
+--- Step 304 ---
+  Loss: 0.518791
+  Learning rate: 3.00e-04
+  Alert type: SHEWHART_2of3
+  Metric: total_grad_norm
+  Value: 2.374325
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 0.971994
+    transformer.wte.weight: 0.766779
+    transformer.h.0.mlp.c_fc.weight: 0.763567
+    transformer.h.0.mlp.c_proj.weight: 0.735994
+    transformer.h.0.attn.c_proj.bias: 0.599562
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 304.0, 'state_step_mean': 304.0, 'state_step_max': 304.0, 'state_exp_avg_norm': 0.05947018414735794, 'state_exp_avg_mean': -4.583080026598907e-10, 'state_exp_avg_max': 0.005863439757376909, 'state_exp_avg_sq_norm': 0.0022398445289582014, 'state_exp_avg_sq_mean': 7.332556783978816e-09, 'state_exp_avg_sq_max': 0.00039636343717575073}
+
+--- Step 305 ---
+  Loss: 0.407807
+  Learning rate: 3.00e-04
+  Alert type: SHEWHART_2of3
+  Metric: loss
+  Value: 0.407807
+  Top 5 gradient norms:
+    transformer.wte.weight: 0.566412
+    transformer.h.0.attn.c_attn.weight: 0.429736
+    transformer.h.0.mlp.c_proj.weight: 0.384231
+    transformer.h.0.mlp.c_fc.weight: 0.370421
+    transformer.h.1.mlp.c_proj.weight: 0.318441
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 305.0, 'state_step_mean': 305.0, 'state_step_max': 305.0, 'state_exp_avg_norm': 0.07121136039495468, 'state_exp_avg_mean': 7.415239255958994e-11, 'state_exp_avg_max': 0.007420258596539497, 'state_exp_avg_sq_norm': 0.0022384226322174072, 'state_exp_avg_sq_mean': 7.336032226135103e-09, 'state_exp_avg_sq_max': 0.0003959866880904883}
+
+--- Step 306 ---
+  Loss: 0.285134
+  Learning rate: 3.00e-04
+  Alert type: SHEWHART_2of3
+  Metric: loss
+  Value: 0.285134
+  Top 5 gradient norms:
+    transformer.wte.weight: 0.484273
+    transformer.h.0.attn.c_attn.weight: 0.324382
+    transformer.h.0.mlp.c_proj.weight: 0.267141
+    transformer.h.0.mlp.c_fc.weight: 0.257924
+    transformer.h.1.mlp.c_proj.weight: 0.225094
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 306.0, 'state_step_mean': 306.0, 'state_step_max': 306.0, 'state_exp_avg_norm': 0.08798214048147202, 'state_exp_avg_mean': -1.0816056383866623e-10, 'state_exp_avg_max': 0.00851994939148426, 'state_exp_avg_sq_norm': 0.002238295041024685, 'state_exp_avg_sq_mean': 7.347932928780665e-09, 'state_exp_avg_sq_max': 0.0003955999854952097}
+
+--- Step 400 ---
+  Loss: 13.787705
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 62.053098
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 23.275333
+    transformer.wte.weight: 19.833996
+    transformer.h.0.attn.c_proj.weight: 18.110128
+    transformer.h.0.mlp.c_proj.weight: 17.868265
+    transformer.h.0.mlp.c_fc.weight: 15.988085
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 400.0, 'state_step_mean': 400.0, 'state_step_max': 400.0, 'state_exp_avg_norm': 0.027986275032162666, 'state_exp_avg_mean': -1.742329336362758e-10, 'state_exp_avg_max': 0.002486414508894086, 'state_exp_avg_sq_norm': 0.002079898724332452, 'state_exp_avg_sq_mean': 6.899314897168551e-09, 'state_exp_avg_sq_max': 0.000360585079761222}
+
+--- Step 401 ---
+  Loss: 10.603618
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 22.970833
+  Top 5 gradient norms:
+    transformer.wte.weight: 14.203003
+    transformer.h.0.attn.c_attn.weight: 5.534593
+    transformer.h.4.mlp.c_fc.weight: 4.988756
+    transformer.h.5.mlp.c_fc.weight: 4.932221
+    transformer.h.4.mlp.c_proj.weight: 4.282135
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 401.0, 'state_step_mean': 401.0, 'state_step_max': 401.0, 'state_exp_avg_norm': 0.03963843360543251, 'state_exp_avg_mean': -1.257024206946511e-10, 'state_exp_avg_max': 0.006311074830591679, 'state_exp_avg_sq_norm': 0.002077976241707802, 'state_exp_avg_sq_mean': 6.903003502145566e-09, 'state_exp_avg_sq_max': 0.00036022462882101536}
+
+--- Step 402 ---
+  Loss: 9.246817
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 17.157182
+  Top 5 gradient norms:
+    transformer.wte.weight: 14.212329
+    transformer.h.5.mlp.c_proj.weight: 2.579529
+    transformer.h.5.mlp.c_fc.weight: 2.534041
+    transformer.h.0.attn.c_attn.weight: 2.512499
+    transformer.h.0.mlp.c_proj.weight: 2.361064
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 402.0, 'state_step_mean': 402.0, 'state_step_max': 402.0, 'state_exp_avg_norm': 0.08145906031131744, 'state_exp_avg_mean': -7.353325587322601e-11, 'state_exp_avg_max': 0.017277203500270844, 'state_exp_avg_sq_norm': 0.0020765746012330055, 'state_exp_avg_sq_mean': 6.93572044241364e-09, 'state_exp_avg_sq_max': 0.00035986441071145236}
+
+--- Step 403 ---
+  Loss: 0.028640
+  Learning rate: 3.00e-04
+  Alert type: SHEWHART_2of3
+  Metric: total_grad_norm
+  Value: 0.222437
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 0.096664
+    transformer.h.0.mlp.c_fc.weight: 0.063794
+    transformer.wte.weight: 0.062458
+    transformer.wpe.weight: 0.060213
+    transformer.h.0.mlp.c_proj.weight: 0.059792
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 403.0, 'state_step_mean': 403.0, 'state_step_max': 403.0, 'state_exp_avg_norm': 0.14620201289653778, 'state_exp_avg_mean': -7.375536292819618e-11, 'state_exp_avg_max': 0.027732225134968758, 'state_exp_avg_sq_norm': 0.0020777408499270678, 'state_exp_avg_sq_mean': 6.999896218218282e-09, 'state_exp_avg_sq_max': 0.00035950454184785485}
+
+--- Step 500 ---
+  Loss: 0.017875
+  Learning rate: 3.00e-04
+  Alert type: CUSUM_HIGH
+  Metric: total_grad_norm
+  Value: 6.400792
+  Top 5 gradient norms:
+    transformer.h.0.attn.c_attn.weight: 2.700644
+    transformer.wte.weight: 2.514967
+    transformer.h.0.mlp.c_fc.weight: 1.848648
+    transformer.h.0.attn.c_proj.weight: 1.782120
+    transformer.h.0.mlp.c_proj.weight: 1.716552
+  Optimizer state:
+    group_0: {'lr': 0.0003, 'state_step_norm': 500.0, 'state_step_mean': 500.0, 'state_step_max': 500.0, 'state_exp_avg_norm': 0.02122223936021328, 'state_exp_avg_mean': 3.71002187304903e-11, 'state_exp_avg_max': 0.0017873740289360285, 'state_exp_avg_sq_norm': 0.0018954462138935924, 'state_exp_avg_sq_mean': 6.405830088596076e-09, 'state_exp_avg_sq_max': 0.0003264318802393973}
+
+======================================================================
+RECOMMENDATIONS
+======================================================================
+
+- GRADIENT SPIKES DETECTED: Consider gradient clipping (torch.nn.utils.clip_grad_norm_) or reducing learning rate.
+  Most affected layers: [('total_grad_norm', 19)]
+
+- LOSS SPIKES DETECTED: Inspect the batch data at flagged steps for corrupted inputs. Check learning rate schedule.
+
+- SUSTAINED SHIFTS DETECTED (CUSUM): The training process experienced a persistent change in gradient/loss statistics, not just isolated outliers. This may indicate data distribution shift or learning rate being too high for convergence.
